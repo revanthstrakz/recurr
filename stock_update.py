@@ -32,3 +32,16 @@ for i,symbl in enumerate(nse.symbol):
         feather.write_dataframe(df,ipath)
         path = '{}.feather'.format(symbl)
         add(path)
+
+        
+import requests
+
+url = "https://api.telegram.org/bot1283089488:AAG8JURqRhrag1pOWx858Xc8aIXaZNklt7w/sendMessage?chat_id=195709455&text=Completed_Stock_recurr"
+
+payload={}
+headers = {}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+        
